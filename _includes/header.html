@@ -1,0 +1,20 @@
+<header class="site-header">
+    <nav class="nav-container">
+        <a href="{{ '/' | relative_url }}" class="nav-logo">
+            <span class="logo-text">ogzhntutucu</span>
+        </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="{{ '/' | relative_url }}" {% if page.url=='/' %}class="active" {% endif %}>Ana Sayfa</a></li>
+            <li><a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' %}class="active" {% endif
+                    %}>Blog</a></li>
+            <li><a href="{{ '/cv' | relative_url }}" {% if page.url=='/cv.html' or page.url=='/cv/' %}class="active" {%
+                    endif %}>CV</a></li>
+        </ul>
+    </nav>
+</header>

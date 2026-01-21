@@ -1,0 +1,48 @@
+# Site Settings
+title: Oğuzhan Tutucu
+description: Software Developer | Android & Kotlin | Open Source Enthusiast
+url: "https://ogzhntutucu.github.io"
+baseurl: ""
+lang: tr
+
+# Author
+author:
+  name: Oğuzhan Tutucu
+  email: ogzhntutucu@gmail.com
+  bio: Bilgisayar Mühendisliği öğrencisi, Android geliştirici ve açık kaynak tutkunu.
+
+# Social Links
+social:
+  github: https://github.com/ogzhntutucu
+  linkedin: https://linkedin.com/in/ogzhntutucu
+  twitter: https://twitter.com/ogzhntutucu
+  medium: https://medium.com/@ogzhntutucu
+  hackerrank: https://www.hackerrank.com/profile/ogzhntutucu
+  googledev: https://g.dev/ogzhntutucu
+  zibidisoft: https://github.com/zibidiSoft
+  email: ogzhntutucu@gmail.com
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:title/
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .git
+  - .gitignore
+
+# Plugins (GitHub Pages supported)
+plugins:
+  - jekyll-seo-tag
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
