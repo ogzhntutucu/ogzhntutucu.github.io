@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'tr' }}">
+<html lang="{{ page.lang | default: 'tr' }}">
 
 <head>
     {% include head.html %}
 </head>
 
-<body>
+<body class="{% if page.is_home %}home-page{% endif %}">
     {% include header.html %}
 
     <main class="main-content">
         {{ content }}
     </main>
 
+    {% unless page.is_home %}
     {% include footer.html %}
+    {% endunless %}
 </body>
 
 </html>

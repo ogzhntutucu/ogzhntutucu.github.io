@@ -1,20 +1,35 @@
 <header class="site-header">
     <nav class="nav-container">
-        <a href="{{ '/' | relative_url }}" class="nav-logo">
-            <span class="logo-text">ogzhntutucu</span>
+        <a href="{% if page.lang == 'en' %}/en/{% else %}/tr/{% endif %}" class="nav-logo">
+            <span class="logo-text">@ogzhntutucu</span>
         </a>
 
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
             <span></span>
         </label>
 
         <ul class="nav-links">
-            <li><a href="{{ '/' | relative_url }}" {% if page.url=='/' %}class="active" {% endif %}>Ana Sayfa</a></li>
-            <li><a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' %}class="active" {% endif
-                    %}>Blog</a></li>
-            <li><a href="{{ '/cv' | relative_url }}" {% if page.url=='/cv.html' or page.url=='/cv/' %}class="active" {%
-                    endif %}>CV</a></li>
+            <li>
+                <a href="{% if page.lang == 'en' %}/en/{% else %}/tr/{% endif %}" {% if page.is_home %}class="active" {%
+                    endif %}>
+                    {% if page.lang == 'en' %}Home{% else %}Ana Sayfa{% endif %}
+                </a>
+            </li>
+            <li>
+                <a href="{% if page.lang == 'en' %}/en/cv{% else %}/tr/cv{% endif %}" {% if page.is_cv %}class="active"
+                    {% endif %}>
+                    CV
+                </a>
+            </li>
+            <li class="nav-controls">
+                <button id="theme-toggle" class="toggle-btn theme-toggle" aria-label="Toggle theme">🌙</button>
+                {% if page.lang == 'en' %}
+                <a href="/tr{{ page.path_suffix | default: '/' }}" class="toggle-btn">Türkçe</a>
+                {% else %}
+                <a href="/en{{ page.path_suffix | default: '/' }}" class="toggle-btn">English</a>
+                {% endif %}
+            </li>
         </ul>
     </nav>
 </header>
