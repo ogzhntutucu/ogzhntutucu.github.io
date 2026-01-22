@@ -83,7 +83,7 @@
 /* Light Mode */
 [data-theme="light"] {
   --bg-primary: #fafafa;
-  --bg-secondary: rgba(255, 255, 255, 0.8);
+  --bg-secondary: rgba(229, 229, 229, 0.8);
   --bg-tertiary: rgba(244, 244, 245, 0.8);
   --bg-glass: rgba(0, 0, 0, 0.02);
   --border: rgba(0, 0, 0, 0.08);
@@ -367,6 +367,7 @@ img {
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
   gap: var(--space-md);
 }
 
