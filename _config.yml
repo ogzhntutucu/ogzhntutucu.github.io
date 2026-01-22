@@ -1,6 +1,6 @@
 # Site Settings
 title: Oğuzhan Tutucu
-description: Software Developer | Android & Kotlin | Open Source Enthusiast
+description: Android Geliştirici (Junior Dev. Adayı) | Bilgisayar Mühendisi
 url: "https://ogzhntutucu.github.io"
 baseurl: ""
 lang: tr
@@ -9,7 +9,7 @@ lang: tr
 author:
   name: Oğuzhan Tutucu
   email: ogzhntutucu@gmail.com
-  bio: Bilgisayar Mühendisliği öğrencisi, Android geliştirici ve açık kaynak tutkunu.
+  bio: Android Geliştirici (Junior Dev. Adayı) | Bilgisayar Mühendisi
 
 # Social Links
 social:
