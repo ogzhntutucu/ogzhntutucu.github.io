@@ -4,7 +4,7 @@ My personal portfolio website built with Jekyll and hosted on GitHub Pages.
 
 ## 🌐 Live Site
 
-**[ogzhntutucu.github.io](https://ogzhntutucu.github.io)**
+**[ogzhntutucu.com](https://ogzhntutucu.com)**
 
 ## ✨ Features
 
