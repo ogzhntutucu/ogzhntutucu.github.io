@@ -5,10 +5,10 @@
 <!-- SEO Meta Tags -->
 <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description"
-    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta name="author" content="{{ site.author.name }}">
 <meta name="keywords"
-    content="{% if page.lang == 'en' %}Android developer Turkey, Kotlin developer, MVVM architecture, Jetpack Compose, Firebase developer, Junior Android developer, mobile app development{% else %}Android geliştirici Türkiye, Kotlin geliştirici, MVVM mimari, Jetpack Compose, Firebase geliştirici, Junior Android developer, mobil uygulama geliştirme{% endif %}">
+  content="{% if page.lang == 'en' %}Android developer Turkey, Kotlin developer, MVVM architecture, Jetpack Compose, Firebase developer, Junior Android developer, mobile app development{% else %}Android geliştirici Türkiye, Kotlin geliştirici, MVVM mimari, Jetpack Compose, Firebase geliştirici, Junior Android developer, mobil uygulama geliştirme{% endif %}">
 
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
@@ -28,9 +28,9 @@
 <meta property="og:type" content="{% if page.is_cv %}profile{% else %}website{% endif %}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:title"
-    content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:description"
-    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta property="og:image" content="{{ site.url }}/assets/images/profile_picture.jpg">
 <meta property="og:image:alt" content="Oğuzhan Tutucu - Android Developer Profile Picture">
 <meta property="og:locale" content="{% if page.lang == 'en' %}en_US{% else %}tr_TR{% endif %}">
@@ -40,54 +40,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
 <meta name="twitter:title"
-    content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
 <meta name="twitter:description"
-    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta name="twitter:image" content="{{ site.url }}/assets/images/profile_picture.jpg">
 <meta name="twitter:image:alt" content="Oğuzhan Tutucu - Android Developer">
-
-<!-- Structured Data (Schema.org) - Person -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Oğuzhan Tutucu",
-  "url": "{{ site.url }}",
-  "image": "{{ site.url }}/assets/images/profile_picture.jpg",
-  "sameAs": [
-    "{{ site.social.github }}",
-    "{{ site.social.linkedin }}",
-    "{{ site.social.medium }}",
-    "{{ site.social.hackerrank }}",
-    "{{ site.social.googledev }}"
-  ],
-  "jobTitle": "Android Developer (Junior Dev. Candidate)",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "zibidi software",
-    "url": "{{ site.social.zibidisoft }}"
-  },
-  "email": "{{ site.author.email }}",
-  "alumniOf": {
-    "@type": "EducationalOrganization",
-    "name": "Iskenderun Technical University",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Iskenderun",
-      "addressRegion": "Hatay",
-      "addressCountry": "Turkey"
-    }
-  },
-  "knowsAbout": [
-    "Android Development",
-    "Kotlin",
-    "MVVM Architecture",
-    "Jetpack Compose",
-    "Firebase",
-    "Mobile App Development"
-  ]
-}
-</script>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,3 +64,6 @@
 {% if site.google_analytics %}
 {% include analytics.html %}
 {% endif %}
+
+<!-- Schema.org JSON-LD -->
+{% include schema.html %}

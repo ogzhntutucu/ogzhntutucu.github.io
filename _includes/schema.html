@@ -1,0 +1,42 @@
+<!-- Structured Data (Schema.org) - Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Oğuzhan Tutucu",
+  "url": "{{ site.url }}",
+  "image": "{{ site.url }}/assets/images/profile_picture.jpg",
+  "sameAs": [
+    "{{ site.social.github }}",
+    "{{ site.social.linkedin }}",
+    "{{ site.social.medium }}",
+    "{{ site.social.hackerrank }}",
+    "{{ site.social.googledev }}"
+  ],
+  "jobTitle": "Android Developer (Junior Dev. Candidate)",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "zibidi software",
+    "url": "{{ site.social.zibidisoft }}"
+  },
+  "email": "{{ site.author.email }}",
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Iskenderun Technical University",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Iskenderun",
+      "addressRegion": "Hatay",
+      "addressCountry": "Turkey"
+    }
+  },
+  "knowsAbout": [
+    "Android Development",
+    "Kotlin",
+    "MVVM Architecture",
+    "Jetpack Compose",
+    "Firebase",
+    "Mobile App Development"
+  ]
+}
+</script>
