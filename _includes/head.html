@@ -2,23 +2,92 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<!-- SEO -->
+<!-- SEO Meta Tags -->
 <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description"
     content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta name="author" content="{{ site.author.name }}">
+<meta name="keywords"
+    content="{% if page.lang == 'en' %}Android developer Turkey, Kotlin developer, MVVM architecture, Jetpack Compose, Firebase developer, Junior Android developer, mobile app development{% else %}Android geliştirici Türkiye, Kotlin geliştirici, MVVM mimari, Jetpack Compose, Firebase geliştirici, Junior Android developer, mobil uygulama geliştirme{% endif %}">
 
-<!-- Open Graph -->
-<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+<!-- Language Alternates (hreflang) -->
+{% if page.lang == 'tr' and page.en_url %}
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.en_url }}">
+<link rel="alternate" hreflang="tr" href="{{ site.url }}{{ page.url }}">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}">
+{% elsif page.lang == 'en' and page.tr_url %}
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url }}">
+<link rel="alternate" hreflang="tr" href="{{ site.url }}{{ page.tr_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.tr_url }}">
+{% endif %}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{% if page.is_cv %}profile{% else %}website{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:title"
+    content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:description"
     content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta property="og:image" content="{{ site.url }}/assets/images/profile_picture.jpg">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:type" content="website">
+<meta property="og:image:alt" content="Oğuzhan Tutucu - Android Developer Profile Picture">
+<meta property="og:locale" content="{% if page.lang == 'en' %}en_US{% else %}tr_TR{% endif %}">
+<meta property="og:site_name" content="{{ site.title }}">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@ogzhntutucu">
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+<meta name="twitter:title"
+    content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:image" content="{{ site.url }}/assets/images/profile_picture.jpg">
+<meta name="twitter:image:alt" content="Oğuzhan Tutucu - Android Developer">
+
+<!-- Structured Data (Schema.org) - Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Oğuzhan Tutucu",
+  "url": "{{ site.url }}",
+  "image": "{{ site.url }}/assets/images/profile_picture.jpg",
+  "sameAs": [
+    "{{ site.social.github }}",
+    "{{ site.social.linkedin }}",
+    "{{ site.social.medium }}",
+    "{{ site.social.hackerrank }}",
+    "{{ site.social.googledev }}"
+  ],
+  "jobTitle": "Android Developer (Junior Dev. Candidate)",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "zibidi software",
+    "url": "{{ site.social.zibidisoft }}"
+  },
+  "email": "{{ site.author.email }}",
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Iskenderun Technical University",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Iskenderun",
+      "addressRegion": "Hatay",
+      "addressCountry": "Turkey"
+    }
+  },
+  "knowsAbout": [
+    "Android Development",
+    "Kotlin",
+    "MVVM Architecture",
+    "Jetpack Compose",
+    "Firebase",
+    "Mobile App Development"
+  ]
+}
+</script>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,3 +102,8 @@
 
 <!-- Favicon -->
 <link rel="icon" type="image/jpeg" href="{{ '/assets/images/profile_picture.jpg' | relative_url }}">
+
+<!-- Google Analytics -->
+{% if site.google_analytics %}
+{% include analytics.html %}
+{% endif %}

@@ -1,14 +1,18 @@
 # Site Settings
 title: Oğuzhan Tutucu
 description: Android Geliştirici (Junior Dev. Adayı) | Bilgisayar Mühendisi
-url: "https://ogzhntutucu.github.io"
+url: "https://ogzhntutucu.com"
 baseurl: ""
 lang: tr
+
+# Google Analytics (GA4)
+# Uncomment and add your GA4 Measurement ID when ready
+google_analytics: G-Z4KCJDP9QN
 
 # Author
 author:
   name: Oğuzhan Tutucu
-  email: ogzhntutucu@gmail.com
+  email: contact@ogzhntutucu.com
   bio: Android Geliştirici (Junior Dev. Adayı) | Bilgisayar Mühendisi
 
 # Social Links
@@ -20,7 +24,7 @@ social:
   hackerrank: https://www.hackerrank.com/profile/ogzhntutucu
   googledev: https://g.dev/ogzhntutucu
   zibidisoft: https://github.com/zibidiSoft
-  email: ogzhntutucu@gmail.com
+  email: contact@ogzhntutucu.com
 
 # Build Settings
 markdown: kramdown

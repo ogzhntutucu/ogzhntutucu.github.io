@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ogzhntutucu.com/sitemap.xml
+
+# Disallow admin/draft pages (if any in future)
+Disallow: /drafts/
+Disallow: /.gemini/
+Disallow: /_site/
