@@ -1,6 +1,6 @@
 # Site Settings
 title: Oğuzhan Tutucu
-description: Android Geliştirici | Bilgisayar Mühendisi
+description: Android Geliştirici & Bilgisayar Mühendisi
 url: "https://ogzhntutucu.com"
 baseurl: ""
 lang: tr
@@ -13,7 +13,7 @@ google_analytics: G-Z4KCJDP9QN
 author:
   name: Oğuzhan Tutucu
   email: contact@ogzhntutucu.com
-  bio: Android Geliştirici | Bilgisayar Mühendisi
+  bio: Android Geliştirici & Bilgisayar Mühendisi
 
 # Social Links
 social:
