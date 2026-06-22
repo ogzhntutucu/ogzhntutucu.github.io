@@ -576,18 +576,16 @@ img {
 
 @media (max-width: 480px) {
   .bento-grid {
-    grid-template-columns: 1fr;
     gap: var(--space-sm);
   }
 
-  .bento-card.large,
-  .bento-card.wide {
-    grid-column: span 1;
+  .bento-card {
+    padding: var(--space-md);
   }
 
   .profile-image-wrapper {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
   .profile-name {
