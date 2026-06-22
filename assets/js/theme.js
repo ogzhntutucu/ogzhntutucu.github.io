@@ -15,10 +15,8 @@
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem(THEME_KEY, theme);
 
-        // Update button text
         const btn = document.getElementById('theme-toggle');
         if (btn) {
-            btn.textContent = theme === 'dark' ? '☀️' : '🌙';
             btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
         }
     }
