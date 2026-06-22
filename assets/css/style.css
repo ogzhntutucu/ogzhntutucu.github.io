@@ -719,7 +719,7 @@ img {
 
 .footer-social {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: var(--space-sm);
 }
@@ -785,6 +785,22 @@ img {
 .social-link.email:hover {
   background: var(--email);
   color: white;
+}
+
+@media (max-width: 480px) {
+  .footer-social {
+    gap: 4px;
+  }
+
+  .social-link {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-link svg {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 /* Hide footer on home page */
