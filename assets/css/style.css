@@ -41,7 +41,7 @@
   --linkedin: #0a66c2;
   --twitter: #1DA1F2;
   --medium: #ffffff;
-  --hackerrank: #02bd53;
+  --codewars: #B1361E;
   --googledev: #4285F4;
   --zibidisoft: #c323b8;
   --email: #ea4335;
@@ -514,11 +514,11 @@ img {
   background: linear-gradient(135deg, rgba(24, 24, 27, 0.15) 0%, transparent 50%);
 }
 
-.social-card.hackerrank {
-  color: var(--hackerrank);
+.social-card.codewars {
+  color: var(--codewars);
 }
 
-.social-card.hackerrank::before {
+.social-card.codewars::before {
   background: linear-gradient(135deg, rgba(2, 189, 83, 0.4) 0%, transparent 50%);
 }
 
@@ -772,8 +772,8 @@ img {
   color: var(--bg-primary);
 }
 
-.social-link.hackerrank:hover {
-  background: var(--hackerrank);
+.social-link.codewars:hover {
+  background: var(--codewars);
   color: var(--bg-primary);
 }
 
