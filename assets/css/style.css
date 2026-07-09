@@ -43,8 +43,9 @@
   --medium: #ffffff;
   --codewars: #B1361E;
   --googledev: #4285F4;
-  --zibidisoft: #c323b8;
-  --email: #ea4335;
+  --zibidisoft: #c58a00;
+  --email: #8600F7;
+  --hyperskill: #08a5ba;
 
   /* Spacing */
   --space-xs: 0.25rem;
@@ -519,7 +520,7 @@ img {
 }
 
 .social-card.codewars::before {
-  background: linear-gradient(135deg, rgba(2, 189, 83, 0.4) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(177, 54, 30, 0.4) 0%, transparent 50%);
 }
 
 .social-card.googledev {
@@ -535,7 +536,15 @@ img {
 }
 
 .social-card.zibidisoft::before {
-  background: linear-gradient(135deg, rgba(195, 35, 184, 0.4) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(233, 218, 41, 0.4) 0%, transparent 50%);
+}
+
+.social-card.hyperskill {
+  color: var(--hyperskill);
+}
+
+.social-card.hyperskill::before {
+  background: linear-gradient(135deg, rgba(0, 225, 239, 0.4) 0%, transparent 50%);
 }
 
 .social-card.email {
@@ -543,7 +552,7 @@ img {
 }
 
 .social-card.email::before {
-  background: linear-gradient(135deg, rgba(234, 67, 53, 0.4) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(134, 0, 247, 0.4) 0%, transparent 50%);
 }
 
 .social-card-content {
@@ -784,7 +793,12 @@ img {
 
 .social-link.zibidisoft:hover {
   background: var(--zibidisoft);
-  color: white;
+  color: var(--bg-primary);
+}
+
+.social-link.hyperskill:hover {
+  background: var(--hyperskill);
+  color: var(--bg-primary);
 }
 
 .social-link.email:hover {
