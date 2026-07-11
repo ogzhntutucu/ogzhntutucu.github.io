@@ -42,7 +42,7 @@
   --twitter: #1DA1F2;
   --instagram: #E4405F;
   --medium: #ffffff;
-  --codewars: #be472f;
+  --codewars: #b33f28;
   --googledev: #4285F4;
   --zibidisoft: #019b91;
   --email: #ae61ec;
@@ -477,6 +477,8 @@ img {
 .social-card svg {
   width: 28px;
   height: 28px;
+  /* Logo ile alttaki metin arasina hafif nefes payi (etiket grubu siki kalir) */
+  margin-bottom: var(--space-xs);
   transition: transform var(--transition-base);
 }
 
@@ -592,6 +594,12 @@ img {
   .bento-card.large {
     grid-column: span 2;
     grid-row: span 1;
+  }
+
+  /* Mobilde logolar bir tik daha kucuk (masaustunde 28px kalir) */
+  .social-card svg {
+    width: 24px;
+    height: 24px;
   }
 
   /* Mobil siralama: zibidi software, twitter-instagram'dan ONCE gelsin.
