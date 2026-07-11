@@ -593,6 +593,21 @@ img {
     grid-column: span 2;
     grid-row: span 1;
   }
+
+  /* Mobil siralama: zibidi software, twitter-instagram'dan ONCE gelsin.
+     Masaustu DOM sirasi degismez; sadece bu 3 kart burada yeniden dizilir.
+     Diger kartlar order:0 kalir, DOM sirasiyla akar. */
+  .bento-card.zibidisoft {
+    order: 1;
+  }
+
+  .bento-card.twitter {
+    order: 2;
+  }
+
+  .bento-card.instagram {
+    order: 3;
+  }
 }
 
 @media (max-width: 480px) {
