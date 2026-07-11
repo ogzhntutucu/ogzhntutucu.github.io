@@ -40,12 +40,13 @@
   --github: #fafbfc;
   --linkedin: #0a66c2;
   --twitter: #1DA1F2;
+  --instagram: #E4405F;
   --medium: #ffffff;
   --codewars: #be472f;
   --googledev: #4285F4;
-  --zibidisoft: #008b82;
+  --zibidisoft: #019b91;
   --email: #ae61ec;
-  --hyperskill: #29a9ba;
+  --hyperskill: #2fc2d6;
 
   /* Kart hover parlama gucu (renk degil, saydamlik yuzdesi) */
   --glow-strong: 40%;
@@ -510,6 +511,14 @@ img {
   background: linear-gradient(135deg, color-mix(in srgb, var(--twitter) var(--glow-strong), transparent) 0%, transparent 50%);
 }
 
+.social-card.instagram {
+  color: var(--instagram);
+}
+
+.social-card.instagram::before {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--instagram) var(--glow-strong), transparent) 0%, transparent 50%);
+}
+
 .social-card.medium {
   color: var(--medium);
 }
@@ -777,6 +786,11 @@ img {
 .social-link.twitter:hover {
   background: var(--twitter);
   color: var(--bg-primary);
+}
+
+.social-link.instagram:hover {
+  background: var(--instagram);
+  color: var(--on-brand);
 }
 
 .social-link.medium:hover {
