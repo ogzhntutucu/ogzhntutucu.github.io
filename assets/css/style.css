@@ -41,11 +41,19 @@
   --linkedin: #0a66c2;
   --twitter: #1DA1F2;
   --medium: #ffffff;
-  --codewars: #B1361E;
+  --codewars: #be472f;
   --googledev: #4285F4;
-  --zibidisoft: #c58a00;
-  --email: #8600F7;
-  --hyperskill: #08a5ba;
+  --zibidisoft: #008b82;
+  --email: #ae61ec;
+  --hyperskill: #29a9ba;
+
+  /* Kart hover parlama gucu (renk degil, saydamlik yuzdesi) */
+  --glow-strong: 40%;
+  --glow-soft: 15%;
+
+  /* Marka renkli buton uzerindeki ikon rengi (kontrast icin).
+     Koyu/doygun butonlarda acik yazi kullanilir. */
+  --on-brand: #ffffff;
 
   /* Spacing */
   --space-xs: 0.25rem;
@@ -475,16 +483,15 @@ img {
   transform: scale(1.15);
 }
 
+/* Kart ikon/yazı rengi + hover parlaması: hepsi :root'taki marka değişkeninden türer.
+   Parlama gücü --glow-* değişkenleriyle ayarlanır (github/medium beyaza yakın olduğu
+   için daha yumuşak). Renk değiştirmek için SADECE :root'taki değişkeni değiştir. */
 .social-card.github {
   color: var(--github);
 }
 
 .social-card.github::before {
-  background: linear-gradient(135deg, rgba(250, 251, 252, 0.15) 0%, transparent 50%);
-}
-
-[data-theme="light"] .social-card.github::before {
-  background: linear-gradient(135deg, rgba(43, 49, 55, 0.15) 0%, transparent 50%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--github) var(--glow-soft), transparent) 0%, transparent 50%);
 }
 
 .social-card.linkedin {
@@ -492,7 +499,7 @@ img {
 }
 
 .social-card.linkedin::before {
-  background: linear-gradient(135deg, rgba(10, 102, 194, 0.4) 0%, transparent 50%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--linkedin) var(--glow-strong), transparent) 0%, transparent 50%);
 }
 
 .social-card.twitter {
@@ -500,7 +507,7 @@ img {
 }
 
 .social-card.twitter::before {
-  background: linear-gradient(135deg, rgba(29, 161, 242, 0.4) 0%, transparent 50%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--twitter) var(--glow-strong), transparent) 0%, transparent 50%);
 }
 
 .social-card.medium {
@@ -508,11 +515,7 @@ img {
 }
 
 .social-card.medium::before {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
-}
-
-[data-theme="light"] .social-card.medium::before {
-  background: linear-gradient(135deg, rgba(24, 24, 27, 0.15) 0%, transparent 50%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--medium) var(--glow-soft), transparent) 0%, transparent 50%);
 }
 
 .social-card.codewars {
@@ -520,7 +523,7 @@ img {
 }
 
 .social-card.codewars::before {
-  background: linear-gradient(135deg, rgba(177, 54, 30, 0.4) 0%, transparent 50%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--codewars) var(--glow-strong), transparent) 0%, transparent 50%);
 }
 
 .social-card.googledev {
@@ -528,7 +531,7 @@ img {
 }
 
 .social-card.googledev::before {
-  background: linear-gradient(135deg, rgba(66, 133, 244, 0.4) 0%, transparent 50%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--googledev) var(--glow-strong), transparent) 0%, transparent 50%);
 }
 
 .social-card.zibidisoft {
@@ -536,7 +539,7 @@ img {
 }
 
 .social-card.zibidisoft::before {
-  background: linear-gradient(135deg, rgba(233, 218, 41, 0.4) 0%, transparent 50%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--zibidisoft) var(--glow-strong), transparent) 0%, transparent 50%);
 }
 
 .social-card.hyperskill {
@@ -544,7 +547,7 @@ img {
 }
 
 .social-card.hyperskill::before {
-  background: linear-gradient(135deg, rgba(0, 225, 239, 0.4) 0%, transparent 50%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--hyperskill) var(--glow-strong), transparent) 0%, transparent 50%);
 }
 
 .social-card.email {
@@ -552,7 +555,7 @@ img {
 }
 
 .social-card.email::before {
-  background: linear-gradient(135deg, rgba(134, 0, 247, 0.4) 0%, transparent 50%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--email) var(--glow-strong), transparent) 0%, transparent 50%);
 }
 
 .social-card-content {
@@ -706,7 +709,7 @@ img {
 
 .cv-skill-tag:hover {
   background: var(--accent);
-  color: white;
+  color: var(--on-brand);
   border-color: var(--accent);
 }
 
@@ -768,7 +771,7 @@ img {
 
 .social-link.linkedin:hover {
   background: var(--linkedin);
-  color: white;
+  color: var(--on-brand);
 }
 
 .social-link.twitter:hover {
@@ -788,7 +791,7 @@ img {
 
 .social-link.googledev:hover {
   background: var(--googledev);
-  color: white;
+  color: var(--on-brand);
 }
 
 .social-link.zibidisoft:hover {
@@ -803,7 +806,7 @@ img {
 
 .social-link.email:hover {
   background: var(--email);
-  color: white;
+  color: var(--on-brand);
 }
 
 @media (max-width: 480px) {

@@ -1,6 +1,6 @@
 # Site Settings
 title: Oğuzhan Tutucu
-description: Android Geliştirici & Bilgisayar Mühendisi
+description: Website - Bilgisayar Mühendisi
 url: "https://ogzhntutucu.com"
 baseurl: ""
 lang: tr
@@ -21,7 +21,7 @@ social:
   linkedin: https://linkedin.com/in/ogzhntutucu
   twitter: https://twitter.com/ogzhntutucu
   medium: https://medium.com/@ogzhntutucu
-  codewars: https://www.codewars.com/users/ogzhntutucu
+  codewars: https://codewars.com/users/ogzhntutucu
   googledev: https://g.dev/ogzhntutucu
   zibidisoft: https://github.com/zibidiSoft
   hyperskill: https://hyperskill.org/my-learning/633120922
